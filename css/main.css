@@ -1,0 +1,217 @@
+@font-face {
+    font-family: font_one;
+    src: url(../fonts/TitilliumWeb-Light.ttf);
+}
+@font-face {
+    font-family: font_two;
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+@font-face {
+    font-family: font_three;
+    src: url(../fonts/Consolas.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    color: #34495e;
+    font-family: font_two;
+    min-height: 100%;
+    position: relative;
+    
+    background-color: #2ecc71;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: font_one;
+}
+div, p {
+    font-family: font_two;
+    margin: 0px;
+}
+
+/* Utilities */
+.font-1 { font-family: font_one; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-green { color: #2ecc71; }
+.text-red { color: #e74c3c; }
+.fullwidth { width: 100%; }
+.fullheight { height: 100%; }
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+/*  background-image: url();        */
+}
+.bg-contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+/*  background-image: url();        */
+}
+.marg-0 {margin: 0px;}
+.marg-top-0 {margin-top: 0px;}
+.marg-top-15 {margin-top: 15px;}
+.marg-top-20 {margin-top: 20px;}
+.marg-top-25 {margin-top: 25px;}
+.marg-top-40 {margin-top: 40px;}
+.marg-top-50 {margin-top: 50px;}
+.marg-top-75 {margin-top: 75px;}
+.marg-top-100 {margin-top: 100px;}
+.marg-bottom-20 {margin-bottom: 20px;}
+.marg-bottom-50 {margin-bottom: 50px;}
+.marg-bottom-75 {margin-bottom: 75px;}
+.marg-bottom-100 {margin-bottom: 100px;}
+
+.padd-0 {padding: 0px;}
+.padd-top-25 {padding-top: 25px;}
+.padd-top-50 {padding-top: 50px;}
+.padd-bottom-25 {padding-bottom: 25px;}
+.padd-bottom-50 {padding-bottom: 50px;}
+.animate {
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.box-shadow {
+	-webkit-box-shadow: 0 0 50px 0 #858585;
+	box-shadow: 0 0 50px 0 #858585;
+}
+.zoom-on-hover:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.border {
+    border: 1px solid #ccc;
+}
+.box-shadow {
+    -webkit-box-shadow: 0 0 50px 0 ##858585;
+    box-shadow: 0 0 50px 0 ##858585;
+}
+.no-underline,
+.no-underline:active,
+.no-underline:focus,
+.no-underline:visited,
+.no-underline:hover {
+    text-decoration: none;
+}
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/*******************************************/
+
+.action-btn {
+    min-width: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ccc;
+    color: #555;
+}
+.form-container {
+    margin-top: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.form div {
+    position: relative;
+}
+.form div input.form-control {
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow:inset 0 0 0 0 #FFFFFF;
+    box-shadow:inset 0 0 0 0 #FFFFFF;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000;
+    position: relative;
+    z-index: 50;
+}
+.form div span {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color: #555;
+    z-index: 49;
+}
+.checkbox {
+    cursor: pointer;
+    padding-left: 24px;
+    position: relative;
+}
+.checkbox i {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+span.active-input-label {
+    top: -13px !important;
+    left: 0px !important;
+    font-size: 0.8em !important;
+    color: #3F51B5 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
