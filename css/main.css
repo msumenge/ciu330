@@ -343,7 +343,8 @@ span.active-input-label {
 }
 .input-text2,
 .input-canvas,
-.input-file {
+.input-file,
+.input-location {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -394,7 +395,8 @@ span.active-input-label {
 .input-canvas-opt div:last-child {
     margin-bottom: 0px;
 }
-#file-prev {
+#file-prev,
+#geolocation-prev {
 	height: 250px;
 	width: 100%;
 	max-width: 350px;

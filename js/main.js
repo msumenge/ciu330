@@ -163,6 +163,47 @@ $('#file-input').change(function(){
 });
 
 
+//Geolocation
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        $('.input-location').html('Geolocation is not supported by this browser.');
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=17&size=350x250&sensor=false";
+	
+    $('.input-location').append('<img src="'+img_url+'" id="geolocation-prev">');
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+			$('.input-location').html('User denied the request for Geolocation.');
+            break;
+        case error.POSITION_UNAVAILABLE:
+			$('.input-location').html('Location information is unavailable.');
+            break;
+        case error.TIMEOUT:
+			$('.input-location').html('The request to get user location timed out.');
+            break;
+        case error.UNKNOWN_ERROR:
+			$('.input-location').html('An unknown error occurred.');
+            break;
+    }
+}
+
+$('.opt-location').on('click', function () {
+	getLocation();
+	showPosition(position);
+});
+
+
 
 
 

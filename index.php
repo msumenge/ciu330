@@ -176,15 +176,15 @@
                     </div>
                 </div>
                 
-                <!-- chat input >
-                <div class="input-text fullwidth">
+                <!-- chat input -->
+                <div class="input-text fullwidth display-none">
                     <div><i class="fa fa-cog"></i></div>
                     <div><input type="text" name="form-password" class="form-control fullwidth" placeholder="Enter a message" required /></div>
                     <div><i class="fa fa-paper-plane"></i> SEND</div>
-                </div-->
+                </div>
                 
-                <!-- live text input >
-                <div class="input-text2 fullwidth">
+                <!-- live text input -->
+                <div class="input-text2 fullwidth display-none">
                     <div class="flex-container">
                         <div class="flex-item"><textarea class="input-text2-input"></textarea></div>
                         <div class="input-text2-opt">
@@ -192,7 +192,7 @@
                             <div><i class="fa fa-floppy-o"></i></div>
                         </div>
                     </div>
-                </div-->
+                </div>
                 
                 <!-- canvas -->
                 <div class="input-canvas fullwidth display-none">
@@ -215,9 +215,15 @@
                 </div>
 				
 				<!-- file upload -->
-                <div class="input-file fullwidth">
+                <div class="input-file fullwidth display-none">
 					<img id="file-prev">
 					<i class="fa fa-upload"></i>
+                </div>
+				
+				<!-- geolocation -->
+                <div class="input-location fullwidth">
+					<!-- id="geolocation-prev" -->
+					
                 </div>
 				
                 <div class="hidden-canvas-input marg-0">
@@ -239,7 +245,7 @@
                 <div class="chat-opt">
                     <i class="fa fa-paperclip"></i>
                 </div>
-                <div class="chat-opt">
+                <div class="chat-opt opt-location">
                     <i class="fa fa-map-marker"></i>
                 </div>
                 <div class="chat-opt">
