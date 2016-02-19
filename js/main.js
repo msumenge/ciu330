@@ -141,3 +141,38 @@ $('#color-input').on('change', function () {
     context.fillStyle = c;
     context.strokeStyle = c;
 });
+
+
+//input preview
+$('#file-prev, .input-file i').on('click', function () {
+	$('#file-input').click();
+});
+//file reader
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#file-prev').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$('#file-input').change(function(){
+    readURL(this);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

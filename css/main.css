@@ -121,7 +121,7 @@ div, p {
 .flex-container {display: flex;}
 .flex-item {flex-grow: 1;}
 .border-0 {border: 0px !important;}
-.display-none {display: none;}
+.display-none {display: none !important;}
 
 /*******************************************/
 
@@ -229,6 +229,7 @@ span.active-input-label {
 }
 #search-contact {
     margin-top: 0px;
+	height: 36px;
 }
 .contact-profile {
     display: flex;
@@ -341,7 +342,8 @@ span.active-input-label {
     border-right: 1px solid #ccc;
 }
 .input-text2,
-.input-canvas {
+.input-canvas,
+.input-file {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -391,6 +393,22 @@ span.active-input-label {
 .input-text2-opt div:last-child,
 .input-canvas-opt div:last-child {
     margin-bottom: 0px;
+}
+#file-prev {
+	height: 250px;
+	width: 100%;
+	max-width: 350px;
+	margin: 8px auto;
+	background: #fff;
+	cursor: pointer;
+}
+.input-file i {
+	font-size: 5em;
+	color: rgba(0,0,0, 0.5);
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 32.5px);
+	cursor: pointer;
 }
 .msg-recipient {
     border-bottom: 1px solid #ccc;

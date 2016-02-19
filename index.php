@@ -8,7 +8,7 @@
         return $url;
     }
 
-    $page = 2;
+    $page = isset($_GET['p']) ? $_GET['p'] : 0;
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,7 +195,7 @@
                 </div-->
                 
                 <!-- canvas -->
-                <div class="input-canvas fullwidth">
+                <div class="input-canvas fullwidth display-none">
                     <div class="flex-container">
                         <div class="flex-item">
                             <canvas id="canvas" class="input-canvas-input">
@@ -211,21 +211,28 @@
                                 <i class="fa fa-circle"></i>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
+				
+				<!-- file upload -->
+                <div class="input-file fullwidth">
+					<img id="file-prev">
+					<i class="fa fa-upload"></i>
+                </div>
+				
                 <div class="hidden-canvas-input marg-0">
                     <input type="color" value="#354b60" id="color-input"/>
+					<input type="file" name="file" id="file-input" />
                 </div>
                 
             </div>
             <div class="col-lg-1 col-md-1 col-sm-2 padd-0">
-                <div class="chat-opt marg-top-0">
+                <div class="chat-opt marg-top-0 active">
                     <i class="fa fa-comment"></i>
                 </div>
-                <div class="chat-opt active">
+                <!--div class="chat-opt">
                     <i class="fa fa-font"></i>
-                </div>
+                </div-->
                 <div class="chat-opt">
                     <i class="fa fa-paint-brush"></i>
                 </div>
@@ -247,9 +254,6 @@
             </div>
         </div>
     </div>
-    <script>
-        
-    </script>
     
 <?php } ?>
     
