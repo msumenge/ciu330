@@ -177,7 +177,7 @@
                 </div>
                 
                 <!-- chat input -->
-                <div class="input-text fullwidth display-none">
+                <div class="input-text fullwidth">
                     <div><i class="fa fa-cog"></i></div>
                     <div><input type="text" name="form-password" class="form-control fullwidth" placeholder="Enter a message" required /></div>
                     <div><i class="fa fa-paper-plane"></i> SEND</div>
@@ -221,9 +221,9 @@
                 </div>
 				
 				<!-- geolocation -->
-                <div class="input-location fullwidth">
+                <div class="input-location fullwidth display-none">
 					<!-- id="geolocation-prev" -->
-					
+                    <div id="geolocation-prev"></div>
                 </div>
 				
                 <div class="hidden-canvas-input marg-0">
@@ -233,30 +233,30 @@
                 
             </div>
             <div class="col-lg-1 col-md-1 col-sm-2 padd-0">
-                <div class="chat-opt marg-top-0 active">
+                <div class="chat-opt marg-top-0 active" data-chat-opt="text">
                     <i class="fa fa-comment"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="canvas">
+                    <i class="fa fa-paint-brush"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="file">
+                    <i class="fa fa-paperclip"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="location">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="tap">
+                    <i class="fa fa-hand-pointer-o"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="camera">
+                    <i class="fa fa-camera"></i>
+                </div>
+                <div class="chat-opt" data-chat-opt="email">
+                    <i class="fa fa-envelope"></i>
                 </div>
                 <!--div class="chat-opt">
                     <i class="fa fa-font"></i>
                 </div-->
-                <div class="chat-opt">
-                    <i class="fa fa-paint-brush"></i>
-                </div>
-                <div class="chat-opt">
-                    <i class="fa fa-paperclip"></i>
-                </div>
-                <div class="chat-opt opt-location">
-                    <i class="fa fa-map-marker"></i>
-                </div>
-                <div class="chat-opt">
-                    <i class="fa fa-hand-pointer-o"></i>
-                </div>
-                <div class="chat-opt">
-                    <i class="fa fa-camera"></i>
-                </div>
-                <div class="chat-opt">
-                    <i class="fa fa-envelope"></i>
-                </div>
             </div>
         </div>
     </div>

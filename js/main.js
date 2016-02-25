@@ -43,13 +43,6 @@ var context = canvas.getContext('2d');
 var radius = 2;
 var dragging = false;
 
-//default values
-canvas.width = $('#canvas').width();
-canvas.height = $('#canvas').height();
-context.lineWidth = radius*2;
-context.fillStyle = '#354b60';
-context.strokeStyle = '#354b60';
-
 var putPoint = function(e) {
     if(dragging) {
         var xPos = e.clientX - canvas.getBoundingClientRect().left;
@@ -166,9 +159,9 @@ $('#file-input').change(function(){
 //Geolocation
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
+        navigator.geolocation.getCurrentPosition(showPosition, showError, {enableHighAccuracy: true});
     } else {
-        $('.input-location').html('Geolocation is not supported by this browser.');
+        $('.input-location').html('<h3 class="text-center fullwidth marg-0">Geolocation is not supported by this browser.</h3>');
     }
 }
 
@@ -176,31 +169,74 @@ function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
 
     var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=17&size=350x250&sensor=false";
+    +latlon+"&zoom=16&size=350x250&sensor=false";
 	
-    $('.input-location').append('<img src="'+img_url+'" id="geolocation-prev">');
+    $('.input-location div').append('<img src="'+img_url+'">');
 }
 
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-			$('.input-location').html('User denied the request for Geolocation.');
+			$('.input-location').html('<h3 class="text-center fullwidth marg-0">Please enable your location service from the settings.</h3>');
             break;
         case error.POSITION_UNAVAILABLE:
-			$('.input-location').html('Location information is unavailable.');
+			$('.input-location').html('<h3 class="text-center fullwidth marg-0">Location information is unavailable.</h3>');
             break;
         case error.TIMEOUT:
-			$('.input-location').html('The request to get user location timed out.');
+			$('.input-location').html('<h3 class="text-center fullwidth marg-0">The request to get user location timed out.</h3>');
             break;
         case error.UNKNOWN_ERROR:
-			$('.input-location').html('An unknown error occurred.');
+			$('.input-location').html('<h3 class="text-center fullwidth marg-0">An unknown error occurred.</h3>');
             break;
     }
 }
 
-$('.opt-location').on('click', function () {
-	getLocation();
-	showPosition(position);
+//----------------------------------------------------
+//----------------------------------------------------
+
+$('.chat-opt').on('click', function () {
+    var selected = $(this).data('chat-opt');
+    var active = $('.chat-opt.active').data('chat-opt');
+    
+    //do nothing if input is already selected
+    if(selected == active) return;
+    
+    //show and hide input
+    $('.input-'+selected).removeClass('display-none');
+    $('.input-'+active).addClass('display-none');
+    
+    //change input indicator
+    $('.chat-opt.active').removeClass('active');
+    $(this).addClass('active');
+    
+    switch (selected) {
+        case 'text':
+            console.log(selected);
+            break;
+        case 'canvas':
+            resetCanvas();
+            console.log(selected);
+            break;
+        case 'file':
+            console.log(selected);
+            break;
+        case 'location':
+            getLocation();
+            showPosition(position);
+            console.log(selected);
+            break;
+        case 'tap':
+            console.log(selected);
+            break;
+        case 'camera':
+            console.log(selected);
+            break;
+        case 'email':
+            console.log(selected);
+            break;
+    }
+    
+    
 });
 
 

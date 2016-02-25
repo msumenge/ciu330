@@ -94,10 +94,6 @@ div, p {
 .border {
     border: 1px solid #ccc;
 }
-.box-shadow {
-    -webkit-box-shadow: 0 0 50px 0 ##858585;
-    box-shadow: 0 0 50px 0 ##858585;
-}
 .no-underline,
 .no-underline:active,
 .no-underline:focus,
@@ -353,7 +349,8 @@ span.active-input-label {
     background-color: #ccc;
 }
 .input-text2 div.flex-container,
-.input-canvas div.flex-container {
+.input-canvas div.flex-container,
+.input-location div#geolocation-prev {
     margin: 8px auto;
     width: 100%;
     max-width: 560px;
@@ -395,8 +392,7 @@ span.active-input-label {
 .input-canvas-opt div:last-child {
     margin-bottom: 0px;
 }
-#file-prev,
-#geolocation-prev {
+#file-prev {
 	height: 250px;
 	width: 100%;
 	max-width: 350px;
